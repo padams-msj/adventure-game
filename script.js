@@ -7,7 +7,7 @@ function startGame() {
 	);
 
 	//use an if statement to check the player's choice and call the appropriate function.
-	if (choice === true) {
+	if (choice) {
 		chooseLeftDoor();
 	} else {
 		chooseRightDoor();
@@ -19,7 +19,7 @@ function chooseLeftDoor() {
 	const choice = confirm(
 		"You enter the left door and find a treasure chest. Click OK to open it, or Cancel to keep walking.",
 	);
-	if (choice == true) {
+	if (choice) {
 		openTreasureChest();
 	} else {
 		leaveTreasureChest();
@@ -40,7 +40,7 @@ function chooseRightDoor() {
 	const choice = confirm(
 		"You enter the right door and find a sleeping dragon. Click OK to try to sneak past it, or Cancel to go back.",
 	);
-	if (choice == true) {
+	if (choice) {
 		sneakPastDragon();
 	} else {
 		chooseLeftDoor();
@@ -52,3 +52,4 @@ function sneakPastDragon() {
 		"You try to sneak past the dragon, but it wakes up and eats you! Game over.",
 	);
 }
+
